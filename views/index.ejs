@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session & Cookies</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="index__body <%= color %>">
+  <main class="index__main">
+    <h1 class="index__form-titel">Formulario</h1>
+    <div class="mensaje">
+   
+    <% if (mensaje) { %>
+      <p><%= mensaje %></p>
+    <% } %>
+    <% if (errors && errors.length > 0) { %>
+      <ul>
+        <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+  </div>
+ 
+  <form class="index__form-form" method="post">
+    <div>
+      <label for="nombre">Ingrese su nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div>
+      <label for="color">Elija un color:</label>
+      <select id="color" name="color" required>
+        <option value="" disabled selected>Seleccione un color</option>
+        <option value="Rojo">Rojo</option>
+        <option value="Verde">Verde</option>
+        <option value="Azul">Azul</option>
+        <option value="Amarillo">Amarillo</option>
+      </select>
+    </div>
+    <div>
+      <label for="email">Ingrese su email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="edad">Ingrese su edad:</label>
+      <input type="number" id="edad" name="edad">
+    </div>
+    <div>
+      <input type="checkbox" id="recordar" name="recordar">
+      <label for="recordar">Recordar color</label>
+    </div>
+    
+
+      <button type="submit">Enviar</button>
+      <button type="button" onclick="olvidarColor()">Olvidar el color</button>
+  
+
+  </form>
+ 
+</main>
+<script>
+  function olvidarColor() {
+    document.cookie = "color=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    location.reload();
+  }
+</script>
+</body>
+</html>

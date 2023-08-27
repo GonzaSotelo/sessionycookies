@@ -1,0 +1,82 @@
+.index__body{
+    background-color: antiquewhite;
+    
+}
+.index__main {
+    background-color: beige;
+    font-family: 'Quicksand', sans-serif;
+    width: 50%;
+    height: 35em;
+    margin: 3% 0 0 28%;
+    box-shadow: 0px 0px 17px 21px rgba(0,0,0,0.3);
+    border-radius: 50px 0;
+}
+.index__form-titel{
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+.index__form-form{display: flex;flex-direction: column;align-items: center;margin-top: 16px;}
+.index__form-form div {
+    display: grid;
+    width: 253%;
+    height: 46px;
+    margin: 0 0 5px 0px;
+}
+.index__form-form label {
+    text-align: center;
+}
+.index__form-form input {
+    border: none;
+    border-radius: 50px;
+    border: solid 2px bisque;
+    height: 25px;
+    width: 25%;
+    margin: 0px 0 0 38%;
+    /* box-shadow: 5px 4px 6px 0px rgba(0,0,0,0.1); */
+}
+.index__form-form select {
+    border: none;
+    border-radius: 50px;
+    border: solid 2px bisque;
+    height: 30px;
+    width: 25%;
+    margin: 0px 0 0 38%;
+    font-weight: lighter;
+    text-align: center;
+    box-shadow: 5px 4px 6px 0px rgba(0,0,0,0.1);
+}
+.index__form-form option {background-color: antiquewhite;}
+.index__form-form button {
+    height: 40px;
+    width: 27%;
+    margin-top: 2%;
+    border: solid 1px bisque;
+    border-radius: 0 25px;
+    background-color: rosybrown;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mensaje{
+    text-align: center;
+    background-color: bisque;
+    height: 27px;
+}
+
+.index__form-form input::selection{
+    border-color: darkgoldenrod;
+}
+
+.Rojo {
+    background-color: red;
+}
+.Verde {
+    background-color: green;
+}
+.Azul {
+    background-color: blue;
+}
+.Amarillo {
+    background-color: yellow;
+}
